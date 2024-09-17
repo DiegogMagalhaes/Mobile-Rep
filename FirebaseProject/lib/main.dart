@@ -1,3 +1,4 @@
+import 'package:firebase_project/home.dart';
 import 'package:firebase_project/login.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -13,7 +14,7 @@ void main() async {
       options: const FirebaseOptions(
         apiKey: '', //sua API Key
         appId: '', //seu projeto ID
-        messagingSenderId: 'sendid',
+        messagingSenderId: '',
         projectId: '', //seu projeto ID
         storageBucket: '', //seu storageBucket
       )
@@ -21,7 +22,7 @@ void main() async {
 
   runApp(MaterialApp(
     title: "Online Shop",
-    home: Login(),
+    home: Home(),
     theme: temaPadrao,
     debugShowCheckedModeBanner: false,
   ));

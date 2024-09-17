@@ -48,8 +48,10 @@ class _LoginState extends State<Login> {
       auth
           .signInWithEmailAndPassword(email: email, password: senha)
           .then((firebaseUser) {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Home()));
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => Home()),
+                (Route<dynamic> route) => false);
       }).catchError((error) {
         _showMsg(error.toString());
       });
